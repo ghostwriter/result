@@ -35,7 +35,7 @@
     ],
     "require": {
         "php": "^8.4",
-        "ghostwriter/option": "^2.0.0"
+        "ghostwriter/option": "~2.0.0"
     },
     "require-dev": {
         "ghostwriter/coding-standard": "dev-main"
