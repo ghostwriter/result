@@ -90,7 +90,7 @@
         "check": [
             "@cache:clear",
             "@bin_composer validate",
-            "@composer-normalize",
+            "@normalize",
             "@ecs",
             "@test"
         ],
@@ -101,6 +101,11 @@
             "@xdebug",
             "@bin_infection"
         ],
+        "normalize": "@bin_normalize --no-cache --diff --no-check-lock --no-scripts --no-plugins",
+        "phive": [
+            "@bin_phive update --force-accept-unsigned",
+            "@bin_phive purge"
+        ],
         "phpunit": [
             "@xdebug",
             "@bin_phpunit"
@@ -108,6 +113,9 @@
         "phpunit:migrate": [
             "@xdebug",
             "@bin_phpunit --migrate-configuration"
+        ],
+        "psalm": [
+            "@bin_psalm"
         ],
         "rector": "@bin_rector",
         "rector:dry-run": "@rector --dry-run",
