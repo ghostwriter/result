@@ -1,7 +1,7 @@
 {
     "name": "ghostwriter/result",
     "description": "Provides a Result type implementation for PHP",
-    "license": "BSD-3-Clause",
+    "license": "BSD-4-Clause",
     "type": "library",
     "keywords": [
         "ghostwriter",
@@ -34,11 +34,17 @@
         "#StandWithUkraine"
     ],
     "require": {
-        "php": ">=8.4",
-        "ghostwriter/option": "^2.0.0"
+        "php": "^8.4",
+        "ghostwriter/option": "~2.0.0"
     },
     "require-dev": {
-        "ghostwriter/coding-standard": "dev-main"
+        "ext-xdebug": "*",
+        "ghostwriter/coding-standard": "dev-main",
+        "infection/infection": "~0.29.14",
+        "mockery/mockery": "~1.6.12",
+        "phpunit/phpunit": "~12.1.6",
+        "symfony/var-dumper": "~7.3.0",
+        "vimeo/psalm": "~6.12.0"
     },
     "minimum-stability": "stable",
     "prefer-stable": true,
@@ -49,20 +55,21 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\Unit\\": "tests/unit/"
+            "Tests\\Unit\\": "tests/Unit/"
         },
         "files": [
             "tests/bootstrap.php"
         ],
         "exclude-from-classmap": [
-            "tests/fixture/"
+            "tests/Fixture/"
         ]
     },
     "config": {
         "allow-plugins": {
-            "ghostwriter/coding-standard": true
+            "ghostwriter/coding-standard": true,
+            "infection/extension-installer": true
         },
-        "bump-after-update": true,
+        "bump-after-update": false,
         "classmap-authoritative": false,
         "discard-changes": true,
         "optimize-autoloader": true,
@@ -82,23 +89,32 @@
         "bin_infection": "vendor/ghostwriter/coding-standard/tools/infection --ansi --min-covered-msi=0 --min-msi=0 --show-mutations --threads=max",
         "bin_normalize": "vendor/ghostwriter/coding-standard/tools/composer-normalize",
         "bin_phive": "vendor/ghostwriter/coding-standard/tools/phive",
-        "bin_phpunit": "vendor/ghostwriter/coding-standard/tools/phpunit --do-not-cache-result --colors=always",
+        "bin_phpunit": "vendor/bin/phpunit --do-not-cache-result --colors=always",
         "bin_psalm": "vendor/ghostwriter/coding-standard/tools/psalm --no-cache",
         "bin_rector": "rector process --clear-cache --no-ansi",
         "cache:clear": "rm -rf ./.cache/*",
         "check": [
             "@cache:clear",
             "@bin_composer validate",
-            "@composer-normalize",
-            "@ecs",
             "@test"
         ],
         "composer-normalize": "@bin_normalize --no-cache --diff --no-check-lock --no-scripts --no-plugins",
+        "docker": [
+            "@docker:build",
+            "@docker:run"
+        ],
+        "docker:build": "docker buildx build --pull --tag workspace .",
+        "docker:run": "docker run -v $(PWD):/github/workspace -w=/github/workspace -e GITHUB_DEBUG=1 -e GITHUB_WORKSPACE=/github/workspace -e GITHUB_TOKEN=github-token -e SIGNING_SECRET_KEY=secret-key workspace",
         "ecs": "@bin_ecs --fix",
         "git:submodule:update": "git submodule update --depth=1 --init --recursive --recommend-shallow --remote",
         "infection": [
             "@xdebug",
             "@bin_infection"
+        ],
+        "normalize": "@bin_normalize --no-cache --diff --no-check-lock --no-scripts --no-plugins",
+        "phive": [
+            "@bin_phive update --force-accept-unsigned",
+            "@bin_phive purge"
         ],
         "phpunit": [
             "@xdebug",
@@ -108,11 +124,19 @@
             "@xdebug",
             "@bin_phpunit --migrate-configuration"
         ],
+        "psalm": "@bin_psalm --show-info=true --no-diff --shepherd --stats",
+        "psalm:alter": "@bin_psalm --alter --allow-backwards-incompatible-changes=false --safe-types",
+        "psalm:baseline": "@bin_psalm --no-diff --set-baseline=psalm-baseline.xml",
+        "psalm:dry-run": "@bin_psalm --alter --issues=all --dry-run",
+        "psalm:fix": "@bin_psalm --alter --issues=UnnecessaryVarAnnotation",
+        "psalm:security": "@bin_psalm --no-diff --taint-analysis",
+        "psalm:update": "@bin_psalm --no-diff --update-baseline=psalm-baseline.xml",
         "rector": "@bin_rector",
         "rector:dry-run": "@rector --dry-run",
         "test": [
             "@phpunit",
-            "@infection"
+            "@infection",
+            "@psalm"
         ],
         "xdebug": "@putenv XDEBUG_MODE=coverage"
     }
