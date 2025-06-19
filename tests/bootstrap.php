@@ -12,11 +12,16 @@ if (! $classLoader instanceof ClassLoader) {
     throw new \RuntimeException('Class loader not found');
 }
 
-$fixturePath = __DIR__ . \DIRECTORY_SEPARATOR . 'fixture';
+ini_set('memory_limit', '-1');
 
-if (\is_dir($fixturePath)) {
+$path = __DIR__ . \DIRECTORY_SEPARATOR . 'Fixture';
+
+if (\is_dir($path)) {
     /** @psalm-suppress UncaughtThrowInGlobalScope */
-    $classLoader->addPsr4('Tests\\Fixture\\', $fixturePath);
+    $classLoader->addPsr4('', $path);
+
+    /** @psalm-suppress UncaughtThrowInGlobalScope */
+    $classLoader->addPsr4('Tests\\Fixture\\', $path);
 }
 
 return $classLoader;
