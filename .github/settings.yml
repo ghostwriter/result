@@ -3,7 +3,6 @@
   "description": "Provides a Result type implementation for PHP"
   "homepage": "https://github.com/ghostwriter/result"
   "topics": "ghostwriter, php, result, result-type"
-  "private": false
   "has_issues": true
   "has_projects": false
   "has_wiki": false
