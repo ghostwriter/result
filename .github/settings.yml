@@ -38,10 +38,6 @@
 "repository":
   "name": "result"
   "description": "Provides a Result type implementation for PHP"
-  "topics":
-    - "ghostwriter"
-    - "result"
-    - "php"
   "homepage": "https://github.com/ghostwriter/result"
   "default_branch": "2.0.x"
   "allow_auto_merge": true
