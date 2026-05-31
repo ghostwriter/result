@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8d32a19ca4152099dd082b9c1ffc1da3",
+    "content-hash": "a9ae3b0dc2c2418c35b104c092940720",
     "packages": [
         {
             "name": "ghostwriter/option",
@@ -296,12 +296,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "5a7d517a2bd56f6b44e0c37ef21d8ec329319ff8"
+                "reference": "ded44fbfe960fdab4e017e99066db985b743a754"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/5a7d517a2bd56f6b44e0c37ef21d8ec329319ff8",
-                "reference": "5a7d517a2bd56f6b44e0c37ef21d8ec329319ff8",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/ded44fbfe960fdab4e017e99066db985b743a754",
+                "reference": "ded44fbfe960fdab4e017e99066db985b743a754",
                 "shasum": ""
             },
             "require": {
@@ -350,7 +350,7 @@
                 "ext-zend-opcache": "*",
                 "ext-zip": "*",
                 "ext-zlib": "*",
-                "php": "~8.4.0 || ~8.5.0"
+                "php": "~8.4.0 || ~8.5.0 || ~8.6.0"
             },
             "conflict": {
                 "pestphp/pest": "*"
@@ -412,7 +412,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-05-31T01:19:25+00:00"
+            "time": "2026-05-31T19:18:44+00:00"
         },
         {
             "name": "ghostwriter/config",
@@ -3920,7 +3920,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "~8.4.0 || ~8.5.0"
+        "php": "~8.4.0 || ~8.5.0 || ~8.6.0"
     },
     "platform-dev": {
         "ext-xdebug": "*"
