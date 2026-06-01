@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "250000638db3bc9be4369b8e264922cc",
+    "content-hash": "75769041c593861e7e2197a225181188",
     "packages": [
         {
             "name": "ghostwriter/option",
@@ -68,16 +68,16 @@
     "packages-dev": [
         {
             "name": "boundwize/structarmed",
-            "version": "0.9.5",
+            "version": "0.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/boundwize/structarmed.git",
-                "reference": "4c62dc582322ef9267d02bb81e9ba88e3ef963e0"
+                "reference": "5e488b5c1502a92e3cef8cf25b87b77e877b9804"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/boundwize/structarmed/zipball/4c62dc582322ef9267d02bb81e9ba88e3ef963e0",
-                "reference": "4c62dc582322ef9267d02bb81e9ba88e3ef963e0",
+                "url": "https://api.github.com/repos/boundwize/structarmed/zipball/5e488b5c1502a92e3cef8cf25b87b77e877b9804",
+                "reference": "5e488b5c1502a92e3cef8cf25b87b77e877b9804",
                 "shasum": ""
             },
             "require": {
@@ -130,7 +130,7 @@
             ],
             "support": {
                 "issues": "https://github.com/boundwize/structarmed/issues",
-                "source": "https://github.com/boundwize/structarmed/tree/0.9.5"
+                "source": "https://github.com/boundwize/structarmed/tree/0.10.0"
             },
             "funding": [
                 {
@@ -138,7 +138,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-06-01T07:01:44+00:00"
+            "time": "2026-06-01T18:39:11+00:00"
         },
         {
             "name": "fidry/cpu-core-counter",
@@ -2472,16 +2472,16 @@
         },
         {
             "name": "sebastian/global-state",
-            "version": "9.0.0",
+            "version": "9.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/global-state.git",
-                "reference": "e52e3dc22441e6218c710afe72c3042f8fc41ea7"
+                "reference": "ba68ba79da690cf7eddefd3ce5b78b20b9ba9945"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/global-state/zipball/e52e3dc22441e6218c710afe72c3042f8fc41ea7",
-                "reference": "e52e3dc22441e6218c710afe72c3042f8fc41ea7",
+                "url": "https://api.github.com/repos/sebastianbergmann/global-state/zipball/ba68ba79da690cf7eddefd3ce5b78b20b9ba9945",
+                "reference": "ba68ba79da690cf7eddefd3ce5b78b20b9ba9945",
                 "shasum": ""
             },
             "require": {
@@ -2491,7 +2491,7 @@
             },
             "require-dev": {
                 "ext-dom": "*",
-                "phpunit/phpunit": "^13.0"
+                "phpunit/phpunit": "^13.1.13"
             },
             "type": "library",
             "extra": {
@@ -2522,7 +2522,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/global-state/issues",
                 "security": "https://github.com/sebastianbergmann/global-state/security/policy",
-                "source": "https://github.com/sebastianbergmann/global-state/tree/9.0.0"
+                "source": "https://github.com/sebastianbergmann/global-state/tree/9.0.1"
             },
             "funding": [
                 {
@@ -2542,7 +2542,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-02-06T04:45:13+00:00"
+            "time": "2026-06-01T15:11:33+00:00"
         },
         {
             "name": "sebastian/lines-of-code",
