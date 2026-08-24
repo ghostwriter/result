@@ -45,11 +45,11 @@
     },
     "require-dev": {
         "ext-xdebug": "*",
-        "boundwize/structarmed": "^0.14.15",
+        "boundwize/structarmed": "^0.16.17",
         "ghostwriter/coding-standard": "dev-main",
-        "ghostwriter/phpunit-assertions": "^0.1.0",
-        "mockery/mockery": "^1.6.12",
-        "phpunit/phpunit": "^13.2.4"
+        "ghostwriter/phpunit-assertions": "^0.1.1",
+        "mockery/mockery": "^1.6.15",
+        "phpunit/phpunit": "^13.3.1"
     },
     "prefer-stable": true,
     "autoload": {
