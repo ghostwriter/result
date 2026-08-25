@@ -137,16 +137,16 @@
         },
         {
             "name": "boundwize/structarmed",
-            "version": "0.16.17",
+            "version": "0.16.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/boundwize/structarmed.git",
-                "reference": "d2d75bd15c9bdccb3e3a21e25cc8b1bff41af4db"
+                "reference": "7a0ad14ea77425955b6edfda5f47398b58be734a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/boundwize/structarmed/zipball/d2d75bd15c9bdccb3e3a21e25cc8b1bff41af4db",
-                "reference": "d2d75bd15c9bdccb3e3a21e25cc8b1bff41af4db",
+                "url": "https://api.github.com/repos/boundwize/structarmed/zipball/7a0ad14ea77425955b6edfda5f47398b58be734a",
+                "reference": "7a0ad14ea77425955b6edfda5f47398b58be734a",
                 "shasum": ""
             },
             "require": {
@@ -203,7 +203,7 @@
             ],
             "support": {
                 "issues": "https://github.com/boundwize/structarmed/issues",
-                "source": "https://github.com/boundwize/structarmed/tree/0.16.17"
+                "source": "https://github.com/boundwize/structarmed/tree/0.16.21"
             },
             "funding": [
                 {
@@ -211,7 +211,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-08-24T12:48:58+00:00"
+            "time": "2026-08-25T13:14:23+00:00"
         },
         {
             "name": "fidry/cpu-core-counter",
