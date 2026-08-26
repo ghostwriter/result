@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3ae42a7c457fba1584802faf83e405c8",
+    "content-hash": "a75690079d80dcbc9f3edcd10d58bce6",
     "packages": [
         {
             "name": "ghostwriter/option",
